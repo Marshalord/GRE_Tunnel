@@ -1,0 +1,24 @@
+#!/bin/sh /etc/rc.common
+# gre script
+#Copyright (C) zhangjiaji wiair
+
+
+START=85
+STOP=85
+
+start(){
+	echo "start gre-wiair"
+	gre-wiair & 
+}
+
+stop(){
+	echo "stop gre-wiair"
+	#gre-wiair -t
+}
+
+EXTRA_COMMANDS="custom"
+EXTRA_HELP="   custom Help for the custom command"
+
+custom(){
+	echo "custom command"
+}
